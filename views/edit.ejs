@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+<section class="create-section">
+  <div class="create-container">
+    <form action="/blog/<%= blogPost.id %>/edit/submit" method="post" class="user-input">
+      <input
+      type="text"
+      name="title"
+      placeholder="Title"
+      class="user-input"
+      value="<%= blogPost.title %>"
+      required>
+
+      <input
+      type="text"
+      name="author"
+      placeholder="Author"
+      class="user-input"
+      value="<%= blogPost.author %>"
+      required>
+
+      <textarea rows="20" name="content" id="blog-content" class="user-input"
+        placeholder="Share your voice, inspire others—start writing today!"
+        required><%= blogPost.content %></textarea>
+
+      <input type="submit" value="Save edit">
+    </form>

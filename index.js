@@ -77,6 +77,23 @@ app.post("/blog/:id/edit/submit", (req, res) => {
   }
 });
 
+// Delete route (POST)
+app.post("/blog/:id/delete", (req, res) => {
+  const blogId = req.params.id;
+
+  // Ensure the id is a number and the blog exists
+  const blogIndex = blogList.findIndex(post => post.id == blogId);
+
+  if (blogIndex !== -1) {
+    // Remove the blog post from the list
+    blogList.splice(blogIndex, 1);
+
+    // Redirect back to the home page after deletion
+    res.redirect("/");
+  } else {
+    res.status(404).send("Blog post not found.");
+  }
+});
 
 app.listen(port, (req, res) => {
   console.log("Running on port", port);

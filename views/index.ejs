@@ -8,7 +8,7 @@
           <a href="/blog/<%= index %>">
             <%= blog.title %>
           </a>
-          <p name="blogAuthor">By <%= blog.author %></p>
+          <p name="blogAuthor">Author: <%= blog.author %></p>
         </li>
     <% }) %> 
   </ul>
@@ -16,5 +16,4 @@
     <p>No blogposts to display</p>
   <% } %>
 </div>
-</body>
-</html>
+<%- include("partials/footer.ejs") %>

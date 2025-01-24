@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+<div class="blog-list-container">
+<% if (blogList.length > 0) { %>
+  <ul>
+    <% blogList.forEach((blog, index) =>{ %> 
+        <li class="blog-preview"> 
+          <a href="/blog/<%= index %>">
+            <%= blog.title %>
+          </a>
+          <p name="blogAuthor">By <%= blog.author %></p>
+        </li>
+    <% }) %> 
+  </ul>
+  <% } else { %>
+    <p>No blogposts to display</p>
+  <% } %>
+</div>
+</body>
+</html>

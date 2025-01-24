@@ -80,4 +80,4 @@ Follow these steps to set up the project locally:
 - Comment System: Allow users to comment on blog posts.
 
 ## Current Status
-This project is still in development and is not finished. While the basic functionality for creating, viewing, editing, and deleting blog posts is in place, there are several enhancements planned for the future, such as user authentication, database integration, and more.
+This project is still in development and is not finished. While the basic functionality for creating, viewing, editing, and deleting blog posts is in place, some parts may not work as intended. There are also several enhancements planned for the future, such as user authentication, database integration, and more.

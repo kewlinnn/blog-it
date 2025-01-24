@@ -82,7 +82,6 @@ input {
 textarea {
   margin-top: 40px;
   resize: none;
-  /* max-height: 500px; */
 }
 .blog-container {
   padding: 30px;

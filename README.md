@@ -42,12 +42,42 @@ Follow these steps to set up the project locally:
    http://localhost:3000
    ```
 
-Routes
-GET /: Displays a list of all blog posts.
-GET /create: Displays the form to create a new blog post.
-POST /submit: Handles form submission for creating a new blog post.
-GET /blog/:id: Displays an individual blog post.
-GET /blog/:id/edit: Displays the form to edit a specific blog post.
-POST /blog/:id/edit/submit: Handles form submission to update an existing blog post.
-POST /blog/:id/delete: Handles deletion of a specific blog post with a confirmation prompt.
-Folder Structure
+## Routes
+- GET /: Displays a list of all blog posts.
+- GET /create: Displays the form to create a new blog post.
+- POST /submit: Handles form submission for creating a new blog post.
+- GET /blog/:id: Displays an individual blog post.
+- GET /blog/:id/edit: Displays the form to edit a specific blog post.
+- POST /blog/:id/edit/submit: Handles form submission to update an existing blog post.
+- POST /blog/:id/delete: Handles deletion of a specific blog post with a confirmation prompt.
+
+## Folder Structure
+```bash
+/blogit
+│
+├── /public            # Static files (CSS, images, etc.)
+│
+├── /views             # EJS templates (layouts and partials)
+│   ├── /partials      # Partial views (e.g., header, footer)
+│   ├── index.ejs      # Home page displaying all blog posts
+│   ├── create.ejs     # Form to create a new blog post
+│   ├── blog.ejs       # Page displaying an individual blog post
+│   ├── edit.ejs       # Form to edit an existing blog post
+│
+├── index.js             # Main server file (entry point)
+├── package.json       # Project dependencies and scripts
+└── README.md          # Project documentation
+```
+
+## Known Issues
+- There is no persistent database, so the blog posts will not be saved after the server is restarted.
+- There is no authentication implemented, so anyone can create, edit, or delete posts.
+
+## Future Enhancements
+- User Authentication: Implement login and user registration features to allow users to manage their own posts.
+- Database Integration: Use a database (e.g., MongoDB, MySQL) to persist blog posts.
+- Search Functionality: Add the ability to search for blog posts by title or author.
+- Comment System: Allow users to comment on blog posts.
+
+## Current Status
+This project is still in development and is not finished. While the basic functionality for creating, viewing, editing, and deleting blog posts is in place, there are several enhancements planned for the future, such as user authentication, database integration, and more.

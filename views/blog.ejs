@@ -8,9 +8,9 @@
   <p class="blog-content"> <%= blogPost.content %> </p>
 
   <div class="buttons">
-    <a href="/blog/<%= blogPost.id %>/edit" class="edit-btn btn">Edit</a>
+    <a href="/blog/<%= blogId %>/edit" class="edit-btn btn">Edit</a>
 
-    <form action="/blog/<%= blogPost.id %>/delete"
+    <form action="/blog/<%= blogId %>/delete"
       method="POST">
       <button type="submit" class="delete-btn btn"
       onclick="confirmDelete()">Delete</button>

@@ -20,12 +20,12 @@ app.get("/create", (req, res) => {
 
 // Adds a new blog post
 app.post("/submit", (req, res) => {
-  blogList.push({
+  blogList.unshift({
     title: req.body["title"],
     author: req.body["author"],
     content: req.body["content"]
   })
-  res.redirect(`/blog/${blogList.length-1}`);
+  res.redirect(`/blog/${0}`);
   console.log("New blog added");
 });
 

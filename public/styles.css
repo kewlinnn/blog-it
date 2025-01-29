@@ -1,10 +1,17 @@
+html {
+  height: 100%;
+}
 * {
   font-family: Poppins, sans-serif;
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
-
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
 header {
   background-color: #F0F0F0;
   height: 70px;
@@ -116,4 +123,70 @@ strong {
 .blog-content {
   text-align: justify;
   margin-top: 50px;
+}
+hr {
+  margin: 20px 0 10px 0;
+}
+.buttons-container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.edit-btn{
+  color: blue;
+  padding: 10px;
+  border-radius: 10px;
+}
+.edit-btn:hover{
+  color: purple
+}
+.delete-btn{
+  padding: 10px;
+  border-radius: 10px;
+  color: red;
+}
+.delete-btn:hover{
+  color: rgb(255, 72, 72);
+}
+
+footer {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+}
+footer p {
+  font-size: small;
+  font-weight: 300;
+}
+footer a {
+  font-weight: 400;
+}
+
+#delete-modal{
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 5px;
+  max-width: max-content;
+}
+#delete-modal div {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.confirm-btn {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: salmon;
+}
+.cancel-btn{
+  padding: 10px;
+  border-radius: 10px;
 }

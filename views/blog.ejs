@@ -6,16 +6,30 @@
   </h2>
   <h3>By: <strong><%= blogPost.author %></strong></h3>
   <p class="blog-content"> <%= blogPost.content %> </p>
+  <hr>
 
-  <div class="buttons">
-    <a href="/blog/<%= blogId %>/edit" class="edit-btn btn">Edit</a>
+  <div class="buttons-container">
+    <a href="/blog/<%= blogId %>/edit" class="edit-btn">Edit</a>
+    <p>|</p>
+    <a class="delete-btn">Delete</a>    
 
-    <form action="/blog/<%= blogId %>/delete"
-      method="POST">
-      <button type="submit" class="delete-btn btn"
-      onclick="confirmDelete()">Delete</button>
-    </form>
   </div>
+
+  <!-- Delete Modal -->
+   <dialog id="delete-modal">
+    <h2>Delete Blog</h2>
+    <p><p>Are you sure you want to delete this blog post?</p></p>
+
+    <div>
+      <button class="cancel-btn">Cancel</button>
+      <form action="/blog/<%= blogId %>/delete"
+            method="POST">
+            <button type="submit" class="confirm-btn"
+            onclick="confirmDelete()">Yes, Delete</button>
+      </form>
+    </div>
+    
+   </dialog>
 </div>
 
 <%- include("partials/footer.ejs") %>

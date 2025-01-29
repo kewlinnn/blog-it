@@ -1,15 +1,21 @@
 <footer>
-  
+  <p>
+    Made with ❤️ by <a href="https://github.com/kewlinnn">kewlinnn</a>
+    &copy; 2025. All rights reserved.
+  </p>
 </footer>
 <script>
-  // Function to show confirmation before deletion
-  function confirmDelete() {
-    const confirmation = confirm("Are you sure you want to delete this blog post?");
-    if (confirmation) {
-      // If confirmed, submit the form
-      document.getElementById("delete-form").submit();
-    }
-  }
+  //dialog for delete confirmation
+  const deleteModal = document.querySelector("#delete-modal");
+  const deleteBtn = document.querySelector(".delete-btn");
+  const cancelBtn = document.querySelector(".cancel-btn")
+
+  deleteBtn.addEventListener("click", () => {
+    deleteModal.showModal();
+  })
+  cancelBtn.addEventListener("click", ()=>{
+    deleteModal.close();
+  })
 </script>  
 </body>
 </html>

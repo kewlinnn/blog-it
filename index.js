@@ -26,7 +26,6 @@ app.post("/submit", (req, res) => {
     content: req.body["content"]
   })
   res.redirect(`/blog/${0}`);
-  console.log("New blog added");
 });
 
 // Displays an individual blog post

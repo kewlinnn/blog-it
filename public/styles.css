@@ -174,8 +174,10 @@ footer a {
   border-radius: 5px;
   max-width: max-content;
 }
+#passkey {
+  margin: 15px 0;
+}
 #delete-modal div {
-  margin-top: 10px;
   width: 100%;
   display: flex;
   justify-content: center;

@@ -83,6 +83,7 @@ app.post("/blog/:id/delete", (req, res) => {
 
   if (blogPost) {
     if (blogPost.passkey !== passkey) {
+      console.log("passkey");
       return res.status(403).send("Unauthorized: Incorrect passkey.");
     }
     blogList.splice(blogId, 1);
